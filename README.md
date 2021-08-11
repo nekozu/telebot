@@ -25,8 +25,8 @@ This is a telegram bot using this library [telegraf](https://github.com/telegraf
 -> pkg install git
 -> git clone https://github.com/Xlaaf/termux-telegram-bot
 -> cd termux-telegram-bot
--> pkg install python
--> python main.py
+-> npm install
+-> npm start
 ```
 # Notes
 
