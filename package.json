@@ -1,15 +1,16 @@
 {
-  "name": "termux-telegram-bot",
+  "name": "telebot",
   "version": "1.0.0",
   "description": "Wanjay",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node index.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "telegraf": "^3.32.0"
+    "axios": "^0.21.1",
+    "telegraf": "^3.39.0"
   }
 }
