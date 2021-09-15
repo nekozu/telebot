@@ -1,11 +1,11 @@
 const Telegraf = require('telegraf');
 const axios = require('axios')                                                                            
-const bot = new Telegraf('your bot token')
+const bot = new Telegraf('1913691087:AAGTeNtMgRoj5rN6lCLuresRiZ7ACzPsYXk')
 
-let lolkey = 'lolkeu'
-let zeks = 'apivinz'
+let lolkey = '2e0da1f78d1721134b21816d'
+let zeks = 'farihdzaky'
 let pais = 'Tester'
-let xteam = 'xteamkey'
+let xteam = '34cc8e499332785f'
 let zhirr = 'zahirgans'
 
 bot.command("start", ctx => {
@@ -468,20 +468,21 @@ bot.command('chord', (ctx) => {
    })
 })
 
-bot.command('brainly', (ctx) => { 
+bot.command('brainly', async (ctx) => { 
     let input = ctx.message.text;
     let inputArray = input.split("brainly ");
     inputArray.shift();
-              message = inputArray.join(" ");
-
-    axios.get('https://api.xteam.xyz/brainly?soal='+message+'&APIKEY='+xteam)
-    .then(res => {
-         //console.log(res);
-         ctx.reply('Soal:'+res.data.soal+'\nJawaban:\n'+res.data.jawaban); 
+              text = inputArray.join(" ");
+   var u = await axios.get('https://brainly-api.nekozuu.repl.co/br?soal=' +text)
+                var ok = u.data.b                                                                       
+                var hai = ok[Math.floor(Math.random() * (ok.length))] 
+                var ngab = hai.pertanyaan
+                 var jawaban = hai.jawaban[Math.floor(Math.random() * hai.jawaban.length)]
+                 var pesan = "Question: "+ngab+"\n\nAnswer: "+jawaban.text
+                return ctx.reply(pesan)
     }).catch(e => {
          console.log(e);
-   })
-})
+         })
 
 bot.command('tinyurl', (ctx) => { 
     let input = ctx.message.text;
